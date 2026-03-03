@@ -1,0 +1,29 @@
+{
+  "bridge": {
+    "name": "Test Homebridge",
+    "username": "CC:22:3D:E3:CE:30",
+    "port": 51826,
+    "pin": "031-45-154"
+  },
+  "platforms": [
+    {
+      "name": "Config",
+      "port": 8581,
+      "platform": "config"
+    },
+    {
+      "platform": "JVCCompuLink",
+      "name": "JVC TD-V541",
+      "gpioPin": 17,
+      "commands": [
+        { "name": "Tape Play", "code": "0x20" },
+        { "name": "Tape Stop", "code": "0x22" },
+        { "name": "Tape Pause", "code": "0x25" },
+        { "name": "Tape FF", "code": "0x23" },
+        { "name": "Tape Rewind", "code": "0x24" },
+        { "name": "Tape Track Fwd", "code": "0x2B" },
+        { "name": "Tape Track Rev", "code": "0x2C" }
+      ]
+    }
+  ]
+}
